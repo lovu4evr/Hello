@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-pure-black: #050505;
+    --color-surface: #111111;
+    --color-cyan: #00FFE0;
+    --color-slate-user: #1A2332;
+    --color-text-primary: #E0E0E0;
+    --color-text-secondary: #8A8A8A;
+    --color-error: #FF4D6A;
+  }
+
+  body {
+    background-color: #050505;
+    color: #E0E0E0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .font-mono-cyber {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+
+/* Custom cyber scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 224, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 224, 0.5);
+}
