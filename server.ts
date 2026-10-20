@@ -25,7 +25,17 @@ app.get('/download/apk', (_req: Request, res: Response) => {
 let aiClient: GoogleGenAI | null = null;
 if (process.env.GEMINI_API_KEY) {
   try {
-    aiClient = new GoogleGenAI({});
+    // Initialize Gemini SDK if API key is provided
+let aiClient: GoogleGenAI | null = null;
+if (process.env.GEMINI_API_KEY) {
+  try {
+    aiClient = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY,
+    });
+  } catch (err) {
+    console.warn('Failed to initialize GoogleGenAI client:', err);
+  }
+}
   } catch (err) {
     console.warn('Failed to initialize GoogleGenAI client:', err);
   }
